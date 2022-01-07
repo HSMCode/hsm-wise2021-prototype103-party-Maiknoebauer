@@ -6,8 +6,7 @@ using UnityEngine;
 public class PlayerConttoller : MonoBehaviour
 {
 
-    public float moveSpeed = 10f;
-    private float moveX;
+    public float moveSpeed = 0.1f;
 
     public Rigidbody2D _rb;
     
@@ -19,13 +18,12 @@ public class PlayerConttoller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveX = Input.GetAxis("Horizontal") * moveSpeed;
+        transform.Translate(Vector3.right * Time.deltaTime * moveSpeed);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            transform.Rotate(Vector3.down * 180);
+        }
     }
 
-    private void FixedUpdate()
-    {
-        Vector2 velocity = _rb.velocity;
-        velocity.x = moveX;
-        _rb.velocity = velocity;
-    }
+    
 }
