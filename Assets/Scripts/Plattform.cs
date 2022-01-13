@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class Plattform : MonoBehaviour
 {
-    public float jumpForce = 10f;
+    public float jumpForce = 12f;
 
+    private float xScale;
+    
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.relativeVelocity.y <= 0f)
@@ -20,4 +22,5 @@ public class Plattform : MonoBehaviour
             }
         }
     }
+    
 }
