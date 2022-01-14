@@ -19,64 +19,18 @@ public class PlayerConttoller : MonoBehaviour
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-
-        FindObjectOfType<AudioManager>().Play("StartMusic");
     }
 
     // Update is called once per frame
     void Update()
     {
         Movement();
-        
+
         Score();
 
         Finish();
 
         GameOver();
-        
-    }
-
-    private void AudioPlay()
-    {
-        if (transform.position.y >= 1)
-        {
-            FindObjectOfType<AudioManager>().Play("Loop1");
-        }
-        
-        if (transform.position.y >= 1)
-        {
-            FindObjectOfType<AudioManager>().Play("Loop2");
-        }
-        
-        if (transform.position.y >= 1)
-        {
-            FindObjectOfType<AudioManager>().Play("Loop3");
-        }
-        
-        if (transform.position.y >= 1)
-        {
-            FindObjectOfType<AudioManager>().Play("Loop4");
-        }
-        
-        if (transform.position.y >= 1)
-        {
-            FindObjectOfType<AudioManager>().Play("Loop5");
-        }
-        
-        if (transform.position.y >= 1)
-        {
-            FindObjectOfType<AudioManager>().Play("Loop6");
-        }
-        
-        if (transform.position.y >= 1)
-        {
-            FindObjectOfType<AudioManager>().Play("Loop7");
-        }
-        
-        if (transform.position.y >= 1)
-        {
-            FindObjectOfType<AudioManager>().Play("Loop8");
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -108,6 +62,15 @@ public class PlayerConttoller : MonoBehaviour
 
     private void Movement()
     {
+       if (transform.position.y >= 80)
+        {
+            moveSpeed = 2f + (transform.position.y / 100); 
+        }
+       else
+        {
+            moveSpeed = 2f;
+        }
+        
         transform.Translate(Vector3.right * Time.deltaTime * moveSpeed);
         if (Input.GetKeyDown(KeyCode.Space))
         {
