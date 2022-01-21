@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class PlayerConttoller : MonoBehaviour
 {
-
     public float moveSpeed = 0.1f;
 
     public Rigidbody2D _rb;
@@ -16,9 +15,22 @@ public class PlayerConttoller : MonoBehaviour
     public Text gameOver;
     public Text finish;
     
+    private AudioSource gameSound;
+    public AudioClip gameOverSound;
+    public AudioClip gameWinSound;
+
+    private bool isGameOver = false;
+    private bool isWon = false;
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        
+    }
+
+    private void Start()
+    {
+        gameSound = GetComponent<AudioSource>();
+        gameSound.Play();
     }
 
     // Update is called once per frame
@@ -35,28 +47,37 @@ public class PlayerConttoller : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Respawn") )
+        if (other.gameObject.CompareTag("Respawn") && isGameOver == false )
         {
+            isGameOver = true;
             Time.timeScale = 0;
             gameOver.gameObject.SetActive(true);
+            gameSound.Stop();
+            gameSound.PlayOneShot(gameOverSound);
         }
     }
 
     private void GameOver()
     {
-        if (transform.position.x <= -3.5f || transform.position.x >= 3.15f)
+        if (transform.position.x <= -3.5f || transform.position.x >= 3.15f && isGameOver == false)
         {
+            isGameOver = true;
             Time.timeScale = 0;
             gameOver.gameObject.SetActive(true);
+            gameSound.Stop();
+            gameSound.PlayOneShot(gameOverSound);
         }
     }
 
     private void Finish()
     {
-        if (transform.position.y >= 342)
+        if (transform.position.y >= 342 && isWon == false)
         {
+            isWon = true;
             Time.timeScale = 0;
             finish.gameObject.SetActive(true);
+            gameSound.Stop();
+            gameSound.PlayOneShot(gameWinSound);
         }
     }
 

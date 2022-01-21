@@ -6,10 +6,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    
     private bool isStarted = false;
     public Text startText;
-
 
     public GameObject plattformPrefab;
 
@@ -63,4 +61,5 @@ public class GameManager : MonoBehaviour
             
         }
     }
+    
 }

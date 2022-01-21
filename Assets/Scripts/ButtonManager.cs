@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManager : MonoBehaviour
 {
+
+    public Animator crossfade;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,8 +19,10 @@ public class ButtonManager : MonoBehaviour
         
     }
 
-    public void startGame()
+
+    public void beginGame()
     {
         SceneManager.LoadScene("MainGame");
     }
+  
 }
