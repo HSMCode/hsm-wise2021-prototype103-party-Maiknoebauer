@@ -1377,7 +1377,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0061828494, y: 0.0041218996}
+  m_Offset: {x: 0.007797934, y: 0.0041218996}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1388,7 +1388,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8115102, y: 0.5437324}
+  m_Size: {x: 0.18402468, y: 0.5437324}
   m_EdgeRadius: 0
 --- !u!212 &846792180
 SpriteRenderer:
@@ -1468,7 +1468,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 164aa70a85515f24ea88dca61b895ca2, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -8551,7 +8551,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: bdff611fff7394a48b5fc0e5b8536033, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.722
+  m_Volume: 0.55
   m_Pitch: 0.5
   Loop: 0
   Mute: 0
@@ -8825,6 +8825,22 @@ PrefabInstance:
     - target: {fileID: 5782790418152659642, guid: 04d037cc93f7b6741bd6e31c5539f4aa, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782790418152659643, guid: 04d037cc93f7b6741bd6e31c5539f4aa, type: 3}
+      propertyPath: m_Points.Array.data[0].x
+      value: -0.25649253
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782790418152659643, guid: 04d037cc93f7b6741bd6e31c5539f4aa, type: 3}
+      propertyPath: m_Points.Array.data[0].y
+      value: -0.006405831
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782790418152659643, guid: 04d037cc93f7b6741bd6e31c5539f4aa, type: 3}
+      propertyPath: m_Points.Array.data[1].x
+      value: 0.26823092
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782790418152659643, guid: 04d037cc93f7b6741bd6e31c5539f4aa, type: 3}
+      propertyPath: m_Points.Array.data[1].y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5782790418152659645, guid: 04d037cc93f7b6741bd6e31c5539f4aa, type: 3}
       propertyPath: m_RootOrder

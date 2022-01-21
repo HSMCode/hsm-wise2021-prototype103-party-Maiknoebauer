@@ -101,8 +101,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.285, y: 0}
-  - {x: 0.285, y: 0}
+  - {x: -0.07362923, y: 0.007022201}
+  - {x: 0.10667963, y: 0.0027790666}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -138,3 +138,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052c0f311b60e2b458ecef55dea462c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 12
+  jumpParticle: {fileID: 0}
